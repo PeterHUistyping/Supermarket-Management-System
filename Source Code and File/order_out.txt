@@ -1,0 +1,22 @@
+Order ID: 100001
+Transaction Time: 2021/10/1
+---List of Goods---
+name: notebook
+quantity: 2
+production_date: 2019/4/1
+price: 15
+
+name: tomato
+quantity: 2
+production_date: 2019/5/1
+guarantee_period: 7
+price: 2.5
+
+name: TV
+quantity: 2
+production_date: 2019/2/15
+color: black
+maintenance_period: 365
+price: 1500
+
+Total cost: 3035

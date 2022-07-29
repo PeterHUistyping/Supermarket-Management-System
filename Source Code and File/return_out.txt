@@ -1,0 +1,10 @@
+Order ID: 1
+Transaction Time: 2021/10/1
+Reason ÕÀªı¿Ì”…£∫ 1
+---List of Goods---
+name: pen
+quantity: 2
+production_date: 2019/1/15
+price: 3
+
+Total cost: 6

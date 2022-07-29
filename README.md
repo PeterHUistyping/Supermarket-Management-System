@@ -28,24 +28,25 @@ Dev C++ & Visual Studio
 
 订单类class Order
 
-    √·订单的日期时间、物品清单及信息（包括名称、数量、单价、总价等）。
-    √每一份订单完成后，应将订单信息打印于屏幕，并同时以txt方式保存于本地。
+    ·订单的日期时间、物品清单及信息（包括名称、数量、单价、总价等）。
+    每一份订单完成后，应将订单信息打印于屏幕，并同时以txt方式保存于本地。
     以其为base派生
     ·class out购货单 商品数量减少、增加收入
     ·class in退货单  物体数量增多、减少收入   
-    √需有对应的购货单的ID号，并同时记录退货原因。使用友元函数、友元类实现。
+    需有对应的购货单的ID号，并同时记录退货原因。使用友元函数、友元类实现。
 
 *工程文件中的各代码源文件的主要作用。*
-主函数调用input();完成初始化；menu();菜单界面。
-menu();中分为：
-	case 1:sell();售卖界面函数
-调用void Selling_substract(int choice)函数，做相应具体售出操作
-	case 2:return_fun();退货界面函数
-调用void Return_add(int choice) 函数，做相应具体售出操作
-	case 3:display();展示函数
-调用display(0);display(1);display(2);展示各个子类情况
-	case 4:revenue_fun();营业额函数
-	case 5:output();输出函数
+
+    主函数调用input()完成初始化；menu();菜单界面。
+    menu()中分为：
+        case 1:sell();售卖界面函数
+            调用void Selling_substract(int choice)函数，做相应具体售出操作
+        case 2:return_fun();退货界面函数
+                调用void Return_add(int choice) 函数，做相应具体售出操作
+        case 3:display();展示函数
+                调用display(0);display(1);display(2);展示各个子类情况
+        case 4:revenue_fun();营业额函数
+        case 5:output();输出函数
 
 *txt文件的作用。*
 
@@ -56,6 +57,7 @@ menu();中分为：
 
 ### C++ 
 友元
+
     friend istream & operator>>(istream & in,Goods & A);
     friend ostream & operator<<(ostream & out, Goods & A);
     friend Goods operator + (Goods& g1,const Goods& g2);
@@ -64,14 +66,21 @@ menu();中分为：
     friend Goods operator * (int n, const Goods& g2);
 
 （纯）虚函数
-通过虚函数int get_type()完成基类代码中对子类的区分。
+
+    通过虚函数int get_type()完成基类代码中对子类的区分。
     virtual int get_type()=0; //0 Daily  //1 Food  //2 EAppliance
 
 动态绑定
+
     virtual int get_type()=0; //0 Daily  //1 Food  //2 EAppliance
     
 操作符重载
+
     friend Goods operator + (Goods& g1,const Goods& g2);
     friend Goods operator - (Goods& g1,const Goods& g2);
     friend Goods operator * (int n, const Goods& g2);
     friend Goods operator = (Goods& g1,const Goods& g2);
+
+### 界面 Interface
+
+![Initialization](Photo/Initialization.png)

@@ -101,7 +101,6 @@ Display
 
 Return
 ![Return](Photo/Return.png)
-Return-out
 ![Return-out](Photo/Return-out.png)
 
 Revenue

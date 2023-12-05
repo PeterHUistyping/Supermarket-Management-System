@@ -57,30 +57,31 @@ Class Order
 
 ### C++ 
 Friend
-
+```c
     friend istream & operator>>(istream & in,Goods & A);
     friend ostream & operator<<(ostream & out, Goods & A);
     friend Goods operator + (Goods& g1,const Goods& g2);
     friend Goods operator - (Goods& g1,const Goods& g2);
     friend Goods operator = (Goods& g1,const Goods& g2);
     friend Goods operator * (int n, const Goods& g2);
-
+```
 (Pure) Virtual Function
 
     Using virtual int get_type() to classify the type of the child.
+```c
     virtual int get_type()=0; //0 Daily  //1 Food  //2 EAppliance
-
+```
 Dynamic Binding
-
+```c
     virtual int get_type()=0; //0 Daily  //1 Food  //2 EAppliance
-    
+ ```   
 Operator Overloading
-
+```c
     friend Goods operator + (Goods& g1,const Goods& g2);
     friend Goods operator - (Goods& g1,const Goods& g2);
     friend Goods operator * (int n, const Goods& g2);
     friend Goods operator = (Goods& g1,const Goods& g2);
-
+``` 
 ### Interface
 Initialization
 ![Initialization](Photo/Initialization.png)
